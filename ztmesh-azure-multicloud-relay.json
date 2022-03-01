@@ -16,6 +16,9 @@
         "virtualMachineName": {
             "type": "string"
         },
+        "vaultName": {
+            "type": "string"
+        },
       "adminPublicKey": {
         "type": "string",
         "defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCoisT+9Z6WlZvn2otP85IfzB+bc5FAF5ZQWIA0lT3e3Np7GApstX2bEEr0eugbt7TjUUDoICXznH1S1za38PduRsrBizK8OJQXejjbDZLWuOzrUqILFRlS1yAvOsuNdpQY8NielTE5UGjkxUyH06OUUZoEwFQyxor6OfGz39dn2rqvH/N1UCQo7L6MG7uGf8wn78UQ34lapufwbD/ISN1X3AAD0H4PdbBziSHmDSGtGWljp8KU3n+jsy5qgTwYnXcODawTkG7toQjZESSVs/lsRMmHIKrCgP163OzNyZAYS0vF8vyztCnv0XVYnkixvENhbIE5Eb3vux05AfsfK6B6X/7vjguU1ePhpHuinMTvKemN61yuYScbK9J08AlAEEzBwc8gyjJovb7QE0/T+xKodrtqX5M1Bv06crX2Y2Muj1Cy3/J7Ai+wfVnVU9zRCPXd1St9M0OamVvn1P5426bkBHaOaeFlWSNWO2a3BLbwTMB7vkU7mvj06l0Wl/aYxp0=",
