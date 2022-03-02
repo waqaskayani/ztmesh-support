@@ -1,7 +1,7 @@
 #!/bin/bash
 
-INSTANCE_NAME=$2
-VAULT_NAME=$1
+INSTANCE_NAME=$1
+VAULT_NAME=$2
 BUILD_ENV=$3
 PATH=/root/.relay-agent
 
