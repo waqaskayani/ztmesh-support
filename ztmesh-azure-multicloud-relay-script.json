@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "virtualMachineName": {
+        "type": "string"
+      },
+      "vaultName": {
+        "type": "string"
+      },
+      "buildEnv": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string",
+        "defaultValue": "[resourceGroup().location]",
+        "metadata": {
+          "description": "Location for all resources."
+        }
+      }
+    },
+    "variables": {},
+    "resources": [
+      {
+        "type": "Microsoft.Compute/virtualMachines/extensions",
+        "name": "[concat(parameters('virtualMachineName'),'/installcustomscript')]",
+        "apiVersion": "2020-12-01",
+        "location": "[parameters('location')]",
+        "dependsOn": [],
+        "properties": {
+          "publisher": "Microsoft.Azure.Extensions",
+          "type": "CustomScript",
+          "typeHandlerVersion": "2.0",
+          "autoUpgradeMinorVersion": true,
+          "settings": {
+            "fileUris": [
+              "https://raw.githubusercontent.com/emumba-com/ztmesh-support/develop/ztmesh-azure-multicloud-script.sh"
+            ],
+            "commandToExecute": "sh ztmesh-azure-multicloud-script.sh"
+          }
+        }
+      }
+    ]
+  }
