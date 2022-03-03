@@ -35,8 +35,10 @@
           "settings": {
             "fileUris": [
               "https://raw.githubusercontent.com/emumba-com/ztmesh-support/develop/ztmesh-azure-multicloud-script.sh"
-            ],
-            "commandToExecute": "[concat('sh ztmesh-azure-multicloud-script.sh', ' ', parameters('virtualMachineName'), ' ', parameters('vaultName'), ' ', parameters('buildEnv'))]"
+            ]
+          },
+          "protectedSettings": {
+            "commandToExecute": "[concat('sudo sh ztmesh-azure-multicloud-script.sh', ' ', parameters('virtualMachineName'), ' ', parameters('vaultName'), ' ', parameters('buildEnv'))]"
           }
         }
       }
