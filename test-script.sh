@@ -12,5 +12,5 @@ touch /home/ubuntu/testfilemyfile
 echo "stuff..." >> /home/ubuntu/testfilemyfile
 
 echo "my instance name: ${INSTANCE_NAME}" >> /home/ubuntu/testfilemyfile
-# echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/testfilemyfile
+echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/testfilemyfile
 # echo "my build name: ${BUILD_ENV}" >> /home/ubuntu/testfilemyfile
