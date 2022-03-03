@@ -2,45 +2,44 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "virtualMachineName": {
-        "type": "string"
-      },
-      "vaultName": {
-        "type": "string"
-      },
-      "buildEnv": {
-        "type": "string"
-      },
-      "location": {
-        "type": "string",
-        "defaultValue": "[resourceGroup().location]",
-        "metadata": {
-          "description": "Location for all resources."
+        "virtualMachineName": {
+            "type": "String"
+        },
+        "vaultName": {
+            "type": "String"
+        },
+        "buildEnv": {
+            "type": "String"
+        },
+        "location": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "String",
+            "metadata": {
+                "description": "Location for all resources."
+            }
         }
-      }
     },
     "variables": {},
     "resources": [
-      {
-        "type": "Extensions",
-        "name": "[concat(parameters('virtualMachineName'),'/installcustomscript')]",
-        "apiVersion": "2019-03-01",
-        "location": "[parameters('location')]",
-        "dependsOn": [],
-        "properties": {
-          "publisher": "Microsoft.Azure.Extensions",
-          "type": "CustomScript",
-          "typeHandlerVersion": "2.1",
-          "autoUpgradeMinorVersion": true,
-          "settings": {
-          },
-          "protectedSettings": {
-            "fileUris": [
-              "https://raw.githubusercontent.com/emumba-com/ztmesh-support/develop/ztmesh-azure-multicloud-script.sh"
-            ],
-            "commandToExecute": "[concat('sudo sh ztmesh-azure-multicloud-script.sh', ' ', parameters('virtualMachineName'), ' ', parameters('vaultName'), ' ', parameters('buildEnv'))]"
-          }
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2020-12-01",
+            "name": "[concat(parameters('virtualMachineName'),'/installcustomscript')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [],
+            "properties": {
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {},
+                "protectedSettings": {
+                    "commandToExecute": "[concat('sudo sh my-script.sh', ' ', parameters('virtualMachineName'), ' ', parameters('vaultName'), ' ', parameters('buildEnv'))]",
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/emumba-com/ztmesh-support/develop/my-script.sh"
+                    ]
+                }
+            }
         }
-      }
     ]
 }
