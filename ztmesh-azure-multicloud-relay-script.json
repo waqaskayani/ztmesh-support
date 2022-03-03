@@ -22,7 +22,7 @@
     "variables": {},
     "resources": [
       {
-        "type": "extensions",
+        "type": "Microsoft.Compute/virtualMachines/extensions",
         "name": "[concat(parameters('virtualMachineName'),'/installcustomscript')]",
         "apiVersion": "2015-06-15",
         "location": "[parameters('location')]",
