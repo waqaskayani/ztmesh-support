@@ -13,6 +13,9 @@
         "subnetName": {
             "type": "string"
         },
+        "identifier": {
+            "type": "string"
+        },
         "virtualMachineName": {
             "type": "string"
         },
