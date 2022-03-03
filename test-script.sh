@@ -3,7 +3,7 @@
 INSTANCE_NAME=$1
 VAULT_NAME=$2
 BUILD_ENV=$3
-PATH=/root/.relay-agent
+FILEPATH=/root/.relay-agent
 
 apt-get update
 apt-get install -y jq
