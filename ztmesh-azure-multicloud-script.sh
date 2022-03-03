@@ -5,8 +5,8 @@ VAULT_NAME=$2
 BUILD_ENV=$3
 PATH=/root/.relay-agent
 
-apt update -y
-apt install jq -y
+sudo apt update -y
+sudo apt install jq -y
 
 # Get access token for Azure Vault audience
 access_token=$(curl -s 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://vault.azure.net' -H Metadata:true | jq -r '.access_token')
