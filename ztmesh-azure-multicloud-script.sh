@@ -35,5 +35,5 @@ sed -i "s~value_2~$(curl -s "https://${VAULT_NAME}.vault.azure.net/secrets/secre
 sed -i "s~value_3~$(curl -s "https://${VAULT_NAME}.vault.azure.net/secrets/site-id?api-version=2016-10-01" -H "Authorization: Bearer $access_token" | jq -r '.value')~g" $PATH/config.json
 sed -i "s~value_4~$(curl -s "https://${VAULT_NAME}.vault.azure.net/secrets/site-name?api-version=2016-10-01" -H "Authorization: Bearer $access_token" | jq -r '.value')~g" $PATH/config.json
 
-curl -L bit.ly/relayagent | sudo bash -s ${BUILD_ENV}
-relay-agent-cli start
+# curl -L bit.ly/relayagent | sudo bash -s ${BUILD_ENV}
+# relay-agent-cli start
