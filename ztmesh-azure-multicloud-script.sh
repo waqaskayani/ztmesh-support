@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 INSTANCE_NAME=$1
 VAULT_NAME=$2
