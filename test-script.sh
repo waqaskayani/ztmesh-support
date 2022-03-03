@@ -8,11 +8,9 @@ PATH=/root/.relay-agent
 sudo apt-get update
 sudo apt-get install -y jq
 
-touch /home/ubuntu/testfilemyfile
-echo "stuff..." >> /home/ubuntu/testfilemyfile
+touch /home/ubuntu/newfile
+echo "stuff..." >> /home/ubuntu/newfile
 
-echo "my instance name: ${INSTANCE_NAME}" >> /home/ubuntu/testfilemyfile
-echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/testfilemyfile
-echo "my build name: ${BUILD_ENV}" >> /home/ubuntu/testfilemyfile
-
-mkdir /home/ubuntu/testdir
+echo "my instance name: ${INSTANCE_NAME}" >> /home/ubuntu/newfile
+echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/newfile
+echo "my build name: ${BUILD_ENV}" >> /home/ubuntu/newfile
