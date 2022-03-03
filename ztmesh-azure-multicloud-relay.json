@@ -93,7 +93,20 @@
                       "destinationAddressPrefix": "*",
                       "destinationPortRange": "22"
                     }
-                  }
+                  },
+                  {
+                    "name": "AllowDevController",
+                    "properties": {
+                      "priority": 1010,
+                      "protocol": "Tcp",
+                      "access": "Allow",
+                      "direction": "Inbound",
+                      "sourceAddressPrefix": "3.139.161.109/32,3.139.228.86/32",
+                      "sourcePortRange": "*",
+                      "destinationAddressPrefix": "*",
+                      "destinationPortRange": "*"
+                    }
+                  }  
                 ]
               }
         },
