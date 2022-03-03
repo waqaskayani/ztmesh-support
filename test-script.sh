@@ -14,3 +14,6 @@ echo "stuff..." >> /home/ubuntu/newfile
 echo "my instance name: ${INSTANCE_NAME}" >> /home/ubuntu/newfile
 echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/newfile
 echo "my build name: ${BUILD_ENV}" >> /home/ubuntu/newfile
+
+sudo mkdir /opt/music
+sudo mkdir -p /home/ubuntu/newdir
