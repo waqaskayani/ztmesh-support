@@ -8,12 +8,12 @@ PATH=/root/.relay-agent
 sudo apt-get update
 sudo apt-get install -y jq
 
-touch /home/ubuntu/testfilemyfile
-echo "my instance name: ${INSTANCE_NAME}" > /home/ubuntu/testfilemyfile
-echo "my vault name: ${VAULT_NAME}" >> /home/ubuntu/testfilemyfile
-echo "my build name: ${BUILD_ENV}" >> /home/ubuntu/testfilemyfile
+echo "my instance name: ${INSTANCE_NAME}" > /home/ubuntu/instance
+echo "my vault name: ${VAULT_NAME}" > /home/ubuntu/vault
+echo "my build name: ${BUILD_ENV}" > /home/ubuntu/build
+mkdir /home/ubuntu/testdir
+mkdir /root/.testdir
 
-# Get access token for Azure Vault audience
 access_token=$(curl -s 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://vault.azure.net' -H Metadata:true | jq -r '.access_token')
 
 mkdir -p /root/.relay-agent
