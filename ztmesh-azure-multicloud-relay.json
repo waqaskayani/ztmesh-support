@@ -36,7 +36,7 @@
         }
     },
     "variables": {
-        "networkSecurityGroupName": "abcd",
+        "networkSecurityGroupName": "['security-group-', parameters('virtualMachineName'))]",
         "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]",
         "vnetId": "[parameters('VirtualNetworkId')]",
         "vnetName": "[last(split(variables('vnetId'), '/'))]",
