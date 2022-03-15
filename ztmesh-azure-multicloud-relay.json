@@ -139,6 +139,7 @@
                 "storageProfile": {
                     "osDisk": {
                         "createOption": "fromImage",
+                        "deleteOption": "Delete",
                         "managedDisk": {
                             "storageAccountType": "StandardSSD_LRS"
                         },
