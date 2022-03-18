@@ -18,18 +18,8 @@ In this quickstart, you use Deployment Manager to deploy a Service Account that 
 
     <walkthrough-project-setup></walkthrough-project-setup>
 
-2. Configure the `gcloud` command-line tool to use your project:
+2. Configure the `gcloud` command-line tool to use your project for Deployment:
 
     ```sh
-	gcloud config set project {{project-id}}
+	./create-integration-sa.sh {{project-id}}
     ```
-
-
-## Deploying template
-
-To deploy the template, run these commands:
-
-```sh
-cd ~/cloudshell_open/ztmesh-support
-gcloud deployment-manager deployments create ztmesh-deployment --config service-account.yaml
-```
