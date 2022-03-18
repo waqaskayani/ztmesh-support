@@ -18,7 +18,7 @@ In this quickstart, you use Deployment Manager to deploy a Service Account that 
 
     <walkthrough-project-setup></walkthrough-project-setup>
 
-2. Configure the `gcloud` command-line tool to use your project for Deployment:
+2. Create the deployment in your specified project:
 
     ```sh
 	./create-integration-sa.sh {{project-id}}
