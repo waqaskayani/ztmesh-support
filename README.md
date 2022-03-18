@@ -1,2 +1,2 @@
 # ztmesh-support
-Repository for support scripts for ZTNA solution
+Repository for support scripts for Extreme ZTNA solution
