@@ -4,19 +4,23 @@
     "parameters": {
         "location": {
             "type": "string",
-            "defaultValue": "[resourceGroup().location]"
+            "defaultValue": "useast2"
         },
         "VirtualNetworkId":{
-            "type": "string"
+            "type": "string",
+            "value": "/subscriptions/6df48df0-802d-4891-9f31-7cc1879f3cb4/resourceGroups/ztna-qa-test/providers/Microsoft.Network/virtualNetworks/ztna-qa-VN1"
         },
         "subnetName": {
-            "type": "string"
+            "type": "string",
+            "value": "default"
         },
         "identifier": {
-            "type": "string"
+            "type": "string",
+            "value": "vm-name"
         },
         "virtualMachineName": {
-            "type": "string"
+            "type": "string",
+            "value": "vm-name"
         },
       "adminPublicKey": {
         "type": "string",
@@ -31,7 +35,7 @@
         },
         "adminUsername": {
             "type": "string",
-            "defaultValue": "test"
+            "defaultValue": "ubuntu"
         }
     },
     "variables": {
